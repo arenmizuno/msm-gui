@@ -60,7 +60,7 @@ class DirectorsController < ApplicationController
     matching_record = Director.where({ :id => d_id})
     the_director = matching_record.at(0)
 
-    the_director.title = params.fetch("name")
+    the_director.name = params.fetch("name")
     the_director.dob = params.fetch("dob")
     the_director.bio = params.fetch("bio")
     the_director.image = params.fetch("image")
